@@ -1,0 +1,40 @@
+{
+  "data": {
+    "msg": "Duplicate value entered for email field, please choose another value"
+  },
+  "status": 400,
+  "statusText": "Bad Request",
+  "headers": {
+    "connection": "keep-alive",
+    "content-length": "78",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sat, 21 Jan 2023 19:46:35 GMT",
+    "etag": "W/\"4e-kZoWSran3bbTt6jkplSQOyaAIlU\"",
+    "keep-alive": "timeout=5",
+    "x-powered-by": "Express"
+  },
+  "config": {
+    "transitional": {
+      "silentJSONParsing": true,
+      "forcedJSONParsing": true,
+      "clarifyTimeoutError": false
+    },
+    "adapter": ["xhr", "http"],
+    "transformRequest": [null],
+    "transformResponse": [null],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1,
+    "maxBodyLength": -1,
+    "env": {},
+    "headers": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/json"
+    },
+    "method": "post",
+    "url": "http://localhost:5000/api/auth/register",
+    "data": "{\"first_name\":\"ksafjksa\",\"last_name\":\"kvhkh\",\"user_name\":\"dahjas\",\"email\":\"abc@gmail.com\",\"age\":\"12\",\"contact_number\":\"2846238462\",\"password\":\"hvjvhhjvjv\"}"
+  },
+  "request": {}
+}

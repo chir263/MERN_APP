@@ -1,0 +1,37 @@
+.loader {
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: scroll;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    align-content: center;
+    /* Black w/ opacity */
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+/* Modal Content */
+.loader-content {
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: auto;
+    padding: 20px;
+    border: none;
+    width: 60%;
+    height: auto;
+    border-radius: 20px;
+    /* overflow: scroll; */
+    margin-bottom: 100px;
+}
