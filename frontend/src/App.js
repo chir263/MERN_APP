@@ -1,15 +1,12 @@
-import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error from "./Pages/Error";
-import Dashboard from "./Pages/dashboard/pages/profile/Profile";
-import Login from "./Pages/Login";
+import Dashboard from "./Pages/dashboard/pages/dashboard/Dashboard";
 import ProtectedRoute from "./Pages/ProtectedRoute";
 import ProtectedSignLogin from "./Pages/ProtectedSignLogin";
 import Home from "./Pages/Home";
 import fav_icon from "../src/media/login/fav_icon.png";
 
 function App() {
-  // const nav = useNavigate();
   document.title = "Greddit";
   var link = document.querySelector("link[rel~='icon']");
   if (!link) {
@@ -54,7 +51,7 @@ function App() {
             </ProtectedSignLogin>
           }
         />
-        <Route path="*" element={<Error text="404 Not Found" />} />
+        <Route path="*" element={<Error text="404 Page Not Found" />} />
       </Routes>
     </BrowserRouter>
   );

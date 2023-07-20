@@ -12,7 +12,6 @@ const Feed = React.memo(
     const [postlist, setPostList] = useState([]);
     const [loader, setLoader] = useState(false);
     const [pagenumber, setPageNumber] = useState(1);
-    // const [loadingpost, setLoadingPost] = useState(false);
     useEffect(() => {
       if (user) {
         const headers = {
@@ -27,7 +26,6 @@ const Feed = React.memo(
           })
           .then((resp) => {
             setPostList([...postlist, ...resp.data.post]);
-            // console.log()
             setLoader(false);
           })
           .catch((err) => {
@@ -43,40 +41,33 @@ const Feed = React.memo(
         if (loader) return;
         if (observer.current) observer.current.disconnect();
         observer.current = new IntersectionObserver((entries) => {
-          // console.log(entries);
           if (entries[0].isIntersecting && postlist.length < post_num) {
             setPageNumber((pagenumber) => pagenumber + 1);
           }
         });
         if (node) observer.current.observe(node);
-        // console.log(node);
       },
       [loader]
     );
 
     const removepost = (post_id) => {
-      // console.log(post_id);
       const headers = {
         authorization: `Bearer ${
           JSON.parse(localStorage.getItem("greddit_user_loggedin")).token
         }`,
       };
-      // setLoader(true);
       axios
         .post(API_URL + `/user/post/${post_id}?op=remove`, {}, { headers })
         .then((resp) => {
-          // console.log(resp.data);
           setPostList(
             postlist
               .filter((post) => post._id !== post_id)
               ?.slice()
               .reverse()
           );
-          // setLoader(false);
         })
         .catch((err) => {
           console.log(err);
-          // setLoader(false);
         });
     };
     return (

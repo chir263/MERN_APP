@@ -1,10 +1,9 @@
 import "./message.css";
 import img_avatar from "../../../../media/user.png";
 
-import { msToHMS } from "../time.js";
+import { msToHMS } from "../../utility/time.js";
 
 export default function Message({ message, own }) {
-  //   console.log(message);
   return (
     <div className={own ? "message own" : "message"}>
       <div className="messageTop">

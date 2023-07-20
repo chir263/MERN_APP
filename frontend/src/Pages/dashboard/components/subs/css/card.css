@@ -1,0 +1,113 @@
+.card {
+  width: 100%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  margin: 30px 0;
+}
+
+.cardWrapper {
+  padding: 10px;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardTopLeft {
+  display: flex;
+  align-items: center;
+}
+
+.cardProfileImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cardUsername {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 10px;
+  background-color: white;
+  border: none;
+  font-size: 16px;
+  color: #00886f;
+  padding: 5px;
+  cursor: default;
+  word-spacing: 10px;
+}
+
+.cardUsername:hover {
+  color: #00d0ce;
+}
+
+.cardDate {
+  font-size: 12px;
+  /* word-spacing: 10px; */
+}
+
+.cardCenter {
+  margin: 20px 0;
+}
+
+.cardImg {
+  margin-top: 20px;
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+
+.cardBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardBottomLeft {
+  display: flex;
+  align-items: center;
+}
+
+.likeIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.cardLikeCounter {
+  font-size: 15px;
+}
+
+.cardCommentText {
+  cursor: pointer;
+  border-bottom: 1px dashed gray;
+  font-size: 15px;
+}
+
+.cardHeading {
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: solid;
+  color: #00907b;
+  font-size: 17px;
+}
+
+.cardText {
+  display: block;
+  background-color: #eeeeee;
+  color: #7d7d7d;
+  padding: 5px;
+}
+
+.delete:hover {
+  color: red
+}
+
+.open:hover {
+  color: #00886f
+}
